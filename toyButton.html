@@ -1,0 +1,4 @@
+<button ng-click="changeColor($ctrl.color, $ctrl.colorType)">
+  {{ $ctrl.colorType === 'text' ? 'Write it in' : 'Fill it in with' }}
+  <span style="color:{{ $ctrl.color }}">{{ $ctrl.color }}</span>
+</button>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app='toy-app'>
+  <head>
+    <meta charset="utf-8">
+    <title>Angular Toy App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+  <body ng-class="[color, bgColor]" ng-controller="BodyCtrl" ng-style="{}">
+    <div class="top">
+      <h1>{{ 'I like big buttons and I cannot lie' }}</h1>
+    </div>
+    <div class="left-col buttons">
+      <h3>Background Color</h3>
+      <toy-button
+        ng-repeat="color in colors"
+        color="color"
+        color-type="'background'"
+        on-click="changeColor(color)" />
+      </toy-button>
+    </div>
+    <div class="middle-col buttons">
+      <h3>Text Color</h3>
+      <toy-button
+        ng-repeat="color in colors"
+        color="color"
+        color-type="'text'"
+        on-click="changeColor(color)">
+      </toy-button>
+    </div>
+    <div class="right-col buttons">
+      <h3>Both Colors</h3>
+      <button class="top-button" ng-click="randomColors()">Randomize!</button>
+      <div class="black-on-white" ng-init="color='black'; bgColor='on-white'">
+        <p>Current colors: {{ color }} {{ bgColor | pretty }}</p>
+      </div>
+    </div>
+  </body>
+</html>

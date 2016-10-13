@@ -1,0 +1,41 @@
+body {
+  height: 98vh;
+  margin: 1vh 5vw;
+  transition: background-color 2s, color 2s;
+  width: 90vw;
+}
+button {
+  background-color: darkgrey;
+  display: block;
+  font-size: 24px;
+  height: 16vh;
+  width: 300px;
+}
+.top {
+  height: 16vh;
+}
+.buttons {
+  position: absolute;
+  top: 50px;
+}
+.left-col { left: 5vw; }
+.middle-col { left: 35vw; }
+.right-col { left: 65vw; }
+
+.on-red { background-color: red; }
+.on-blue { background-color: blue; }
+.on-black { background-color: black; }
+.on-purple { background-color: purple; }
+.on-white { background-color: white; }
+.on-white { background-color: white; }
+
+.red { color: red; }
+.blue { color: blue; }
+.black { color: black; }
+.purple { color: purple; }
+.white { color: white; }
+
+.black-on-white {
+  color: black !important;
+  background-color: white !important;
+}
