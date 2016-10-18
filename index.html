@@ -7,34 +7,37 @@
     <script src="app.js"></script>
     <link rel="stylesheet" type="text/css" href="main.css" />
   </head>
-  <body ng-class="[color, bgColor]" ng-controller="BodyCtrl" ng-style="{}">
+  <body ng-style="{color: color, 'background-color': bgColor}" ng-controller="BodyCtrl">
     <div class="top">
       <h1>{{ 'I like big buttons and I cannot lie' }}</h1>
     </div>
     <div class="left-col buttons">
-      <h3>Background Color</h3>
-      <toy-button
-        ng-repeat="color in colors"
-        color="color"
-        color-type="'background'"
-        on-click="changeColor(color)" />
-      </toy-button>
-    </div>
-    <div class="middle-col buttons">
       <h3>Text Color</h3>
       <toy-button
-        ng-repeat="color in colors"
-        color="color"
-        color-type="'text'"
-        on-click="changeColor(color)">
-      </toy-button>
+      color="color"
+      color-type="'text'"
+      on-click="changeColor(color)"
+      ng-repeat="color in colors">
+    </toy-button>
+    </div>
+    <div class="middle-col buttons">
+      <h3>Background Color</h3>
+      <toy-button
+      ng-repeat="color in colors"
+      color="color"
+      color-type="'background'"
+      on-click="changeColor(color)" />
+    </toy-button>
     </div>
     <div class="right-col buttons">
       <h3>Both Colors</h3>
-      <button class="top-button" ng-click="randomColors()">Randomize!</button>
-      <div class="black-on-white" ng-init="color='black'; bgColor='on-white'">
-        <p>Current colors: {{ color }} {{ bgColor | pretty }}</p>
+      <div class="text-box" ng-init="color='white'; bgColor='black'">
+        <p>Current colors: {{ color }} on {{ bgColor }}</p>
       </div>
+      <button ng-click="randomColors()">Randomize!</button>
+      <button ng-click="toggleAutoChange()">
+        {{ isAutoChanging() ? 'Stop' : 'Start' }} Auto Change
+      </button>
     </div>
   </body>
 </html>

@@ -1,15 +1,16 @@
 body {
   height: 98vh;
   margin: 1vh 5vw;
-  transition: background-color 2s, color 2s;
+  transition: background-color 3s, color 3s;
   width: 90vw;
 }
 button {
   background-color: darkgrey;
   display: block;
   font-size: 24px;
-  height: 16vh;
+  height: 6vh;
   width: 300px;
+  margin: 2vh 0;
 }
 .top {
   height: 16vh;
@@ -22,20 +23,7 @@ button {
 .middle-col { left: 35vw; }
 .right-col { left: 65vw; }
 
-.on-red { background-color: red; }
-.on-blue { background-color: blue; }
-.on-black { background-color: black; }
-.on-purple { background-color: purple; }
-.on-white { background-color: white; }
-.on-white { background-color: white; }
-
-.red { color: red; }
-.blue { color: blue; }
-.black { color: black; }
-.purple { color: purple; }
-.white { color: white; }
-
-.black-on-white {
+.text-box {
   color: black !important;
   background-color: white !important;
 }
